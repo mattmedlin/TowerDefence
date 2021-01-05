@@ -6,9 +6,10 @@ using UnityEngine;
 [SelectionBase]
 public class CubeEditor : MonoBehaviour
 {
-    [SerializeField] [Range(1f, 20f)] float gridSize = 10f;
+    const float gridSize = 10f;
 
     TextMesh textMesh;
+    Vector3 gridPos;
 
     void Start()
     {
@@ -17,14 +18,13 @@ public class CubeEditor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 snapPos;
 
-        snapPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
-        snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-        transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
+        gridPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
+        gridPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
+        transform.position = new Vector3(gridPos.x, 0f, gridPos.z);
 
         textMesh = GetComponentInChildren<TextMesh>();
-        string labelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        string labelText = gridPos.x / gridSize + "," + gridPos.z / gridSize;
         textMesh.text = labelText;
         gameObject.name = "Cube " + labelText;
 
