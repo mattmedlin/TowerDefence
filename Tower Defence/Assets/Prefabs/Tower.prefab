@@ -3783,7 +3783,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
+    minKillSpeed: 1000
     maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
@@ -4858,9 +4858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 4455995961366583749}
-  targetEnemy: {fileID: 0}
   bullets: {fileID: 498308186}
-  attackRange: 10
+  attackRange: 25
 --- !u!1001 &4456438234948414893
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplored: 0
   exploredFrom: {fileID: 0}
+  isPlaceable: 1
+  towerPrefab: {fileID: 4456438236370659096, guid: d45bd6a583d03294da02550f1d737337, type: 3}
 --- !u!65 &6042349756653655241
 BoxCollider:
   m_ObjectHideFlags: 0
